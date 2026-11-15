@@ -1,160 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Gym Log</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="theme-color" content="#1f4fd8">
-<link rel="manifest" href="manifest.webmanifest">
-<link rel="icon" href="icon-192.png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<meta name="apple-mobile-web-app-title" content="Gym Log">
-<style>
-:root{--bg:#e9eaec;--card:#fff;--ink:#16181d;--mut:#6a707c;--line:#d5d8de;--acc:#1f4fd8;--accfg:#fff;--ok:#1b8a4b;--bad:#c23b3b;--hol:#a8741a;
-box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14171c;--card:#1d2128;--ink:#eceef2;--mut:#98a0ad;--line:#2d333d;--acc:#7fa2ff;--accfg:#0d1220;--ok:#4cc27e;--bad:#ef7a7a;--hol:#e0b04f;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#14171c;--card:#1d2128;--ink:#eceef2;--mut:#98a0ad;--line:#2d333d;--acc:#7fa2ff;--accfg:#0d1220;--ok:#4cc27e;--bad:#ef7a7a;--hol:#e0b04f;color-scheme:dark}
-html{scroll-padding-top:env(safe-area-inset-top,0px)}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding-bottom:84px}
-main{max-width:620px;margin:0 auto;padding:16px}
-h1{font-size:26px;margin:4px 0 12px;font-weight:800;letter-spacing:-.02em}
-h2{font-size:15px;margin:18px 0 8px;font-weight:700}
-.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:10px}
-.row{display:flex;align-items:center;gap:10px}.sp{justify-content:space-between}
-.mut{color:var(--mut);font-size:13px}
-button,input,select{font:inherit;color:inherit}
-button{border:1px solid var(--line);background:var(--card);border-radius:10px;padding:9px 14px;cursor:pointer}
-button.p{background:var(--acc);color:var(--accfg);border-color:var(--acc);font-weight:700}
-button.x{color:var(--bad);padding:6px 10px}
-button:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
-input[type=text],input[type=date]{width:100%;padding:10px;border:1px solid var(--line);border-radius:10px;background:var(--bg)}
-.chips{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}
-.chip{padding:6px 10px;border-radius:99px;font-size:13px;border:1px solid var(--line);background:var(--bg);cursor:pointer;user-select:none}
-.chip.on{background:var(--acc);color:var(--accfg);border-color:var(--acc);font-weight:700}
-.att{width:100%;padding:16px;font-size:18px;font-weight:800;border-radius:12px}
-.att.on{background:var(--ok);border-color:var(--ok);color:#fff}
-.ex{display:flex;gap:10px;align-items:flex-start}
-.ex img,.ph{width:64px;height:64px;border-radius:8px;object-fit:cover;flex:none;background:var(--bg);border:1px solid var(--line)}
-.ex .b{flex:1;min-width:0}
-.ex.done{opacity:.75}
-.ex.done .nm{text-decoration:line-through}
-.nm{font-weight:700}
-.tick{width:34px;height:34px;border-radius:10px;flex:none;font-size:18px;padding:0}
-.tick.on{background:var(--ok);border-color:var(--ok);color:#fff}
-.note{margin-top:6px;padding:7px 9px!important;font-size:14px}
-.tag{font-size:12px;font-weight:700;padding:3px 8px;border-radius:99px;background:var(--bg);border:1px solid var(--line)}
-.tag.ok{color:var(--ok)}.tag.bad{color:var(--bad)}.tag.hol{color:var(--hol)}
-.bar{height:8px;background:var(--bg);border-radius:9px;overflow:hidden;border:1px solid var(--line)}.bar i{display:block;height:100%;background:var(--acc)}
-.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.big{font-size:28px;font-weight:800;letter-spacing:-.02em}
-nav{position:fixed;left:0;right:0;bottom:0;background:var(--card);border-top:1px solid var(--line);display:flex;padding:6px 6px calc(6px + env(safe-area-inset-bottom,0px))}
-nav button{flex:1;border:0;background:none;font-size:13px;padding:10px 4px;color:var(--mut);font-weight:600}
-nav button.on{color:var(--acc)}
-.banner{background:var(--card);border:1px dashed var(--hol);color:var(--hol);border-radius:12px;padding:12px;margin-bottom:10px;font-weight:700}
-.empty{text-align:center;color:var(--mut);padding:24px 8px}
-.lnk{cursor:pointer}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#1f4fd8" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Gym Log" />
+  <link rel="icon" href="/icon-192.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <title>Gym Log</title>
 </head>
 <body>
-<main id="v"></main>
-<nav id="nav"></nav>
-<script>
-const KEY='gymlog.v1';
-let S={ex:[],logs:{},holidays:[]};
-try{const r=localStorage.getItem(KEY);if(r)S=Object.assign(S,JSON.parse(r))}catch(e){}
-function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){alert('Storage is full. Remove some exercise images.')}}
-const pad=n=>String(n).padStart(2,'0');
-const fmt=d=>d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());
-const parse=s=>{const a=s.split('-').map(Number);return new Date(a[0],a[1]-1,a[2])};
-const add=(s,n)=>{const d=parse(s);d.setDate(d.getDate()+n);return fmt(d)};
-const DN=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-const todayS=fmt(new Date());
-let cur=todayS,tab='today',wk=0,showAll=false,draft={days:[],img:''};
-const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const $=s=>document.querySelector(s);
-const hol=d=>S.holidays.find(h=>h.date===d);
-const lg=d=>S.logs[d]||(S.logs[d]={att:false,done:{}});
-const isOk=(d,id)=>{const l=S.logs[d];return !!(l&&l.done&&l.done[id]&&l.done[id].ok)};
-const nice=d=>{const x=parse(d);return DN[x.getDay()]+', '+x.getDate()+' '+x.toLocaleString('en',{month:'short'})};
-const img=e=>e.img?'<img src="'+e.img+'" alt="'+esc(e.name)+'">':'<div class="ph"></div>';
-
-function today(){
-  const d=cur,wd=parse(d).getDay(),l=S.logs[d]||{att:false,done:{}},h=hol(d);
-  const list=S.ex.filter(e=>showAll||e.days.includes(wd));
-  let o='<h1>'+(d===todayS?'Today':nice(d))+'</h1>';
-  o+='<div class="row sp card"><button onclick="go(-1)">‹</button><div style="text-align:center"><b>'+nice(d)+'</b>'+(d!==todayS?'<div class="mut lnk" onclick="cur=todayS;render()">Back to today</div>':'')+'</div><button onclick="go(1)">›</button></div>';
-  if(h)o+='<div class="banner">Holiday: '+esc(h.label)+'</div>';
-  o+='<button class="att '+(l.att?'on':'')+'" onclick="setAtt()">'+(l.att?'✓ Attended':'Mark attendance')+'</button>';
-  const n=list.filter(e=>isOk(d,e.id)).length;
-  o+='<div class="row sp"><h2>Exercises</h2><span class="mut">'+n+' / '+list.length+' done</span></div>';
-  if(!list.length)o+='<div class="empty">'+(S.ex.length?'Nothing planned for this day.':'No exercises yet. Add your routine in the Routine tab.')+'</div>';
-  list.forEach(e=>{const k=l.done&&l.done[e.id]||{},ok=!!k.ok;
-    o+='<div class="card ex'+(ok?' done':'')+'">'+img(e)+'<div class="b"><div class="nm">'+esc(e.name)+'</div><div class="mut">'+e.days.map(x=>DN[x]).join(' ')+'</div><input type="text" class="note" placeholder="Sets × reps / weight (optional)" value="'+esc(k.note||'')+'" oninput="note(\''+e.id+'\',this.value)"></div><button class="tick'+(ok?' on':'')+'" aria-label="Mark done" onclick="tog(\''+e.id+'\')">✓</button></div>';});
-  if(S.ex.length)o+='<div class="row" style="margin-top:6px"><label class="mut"><input type="checkbox" '+(showAll?'checked':'')+' onchange="showAll=this.checked;render()"> Show all exercises (log one from another day)</label></div>';
-  return o;
-}
-function go(n){cur=add(cur,n);render()}
-function setAtt(){const l=lg(cur);l.att=!l.att;save();render()}
-function tog(id){const l=lg(cur);const k=l.done[id]||(l.done[id]={ok:false,note:''});k.ok=!k.ok;save();render()}
-function note(id,v){const l=lg(cur);const k=l.done[id]||(l.done[id]={ok:false,note:''});k.note=v;save()}
-
-function routine(){
-  let o='<h1>Routine</h1><div class="card"><b>Add exercise</b><div style="margin-top:8px"><input type="text" id="n" placeholder="Exercise name"></div><div class="chips">'+
-  [1,2,3,4,5,6,0].map(i=>'<span class="chip '+(draft.days.includes(i)?'on':'')+'" onclick="dd('+i+',this)">'+DN[i]+'</span>').join('')+'</div>'+
-  '<div class="row"><div id="pv">'+(draft.img?'<img class="ph" src="'+draft.img+'" alt="">':'<div class="ph"></div>')+'</div><input type="file" accept="image/*" onchange="pick(this)"></div>'+
-  '<div style="margin-top:10px"><button class="p" onclick="addEx()">Add exercise</button></div></div>';
-  if(!S.ex.length)o+='<div class="empty">Your exercises will appear here. Pick the weekdays you do each one.</div>';
-  S.ex.forEach(e=>{o+='<div class="card ex">'+img(e)+'<div class="b"><div class="nm">'+esc(e.name)+'</div><div class="chips">'+[1,2,3,4,5,6,0].map(i=>'<span class="chip '+(e.days.includes(i)?'on':'')+'" onclick="tgDay(\''+e.id+'\','+i+')">'+DN[i]+'</span>').join('')+'</div></div><button class="x" onclick="del(\''+e.id+'\')">Delete</button></div>';});
-  return o;
-}
-function dd(i,el){const k=draft.days.indexOf(i);k<0?draft.days.push(i):draft.days.splice(k,1);el.classList.toggle('on')}
-function pick(inp){const f=inp.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{const im=new Image();im.onload=()=>{const m=360,s=Math.min(1,m/Math.max(im.width,im.height)),c=document.createElement('canvas');c.width=im.width*s;c.height=im.height*s;c.getContext('2d').drawImage(im,0,0,c.width,c.height);draft.img=c.toDataURL('image/jpeg',.7);$('#pv').innerHTML='<img class="ph" src="'+draft.img+'" alt="">'};im.src=r.result};r.readAsDataURL(f)}
-function addEx(){const n=$('#n').value.trim();if(!n)return alert('Enter an exercise name.');if(!draft.days.length)return alert('Pick at least one weekday.');
-  S.ex.push({id:Date.now().toString(36),name:n,days:draft.days.slice().sort(),img:draft.img});draft={days:[],img:''};save();render()}
-function tgDay(id,i){const e=S.ex.find(x=>x.id===id);const k=e.days.indexOf(i);k<0?e.days.push(i):e.days.splice(k,1);save();render()}
-function del(id){if(confirm('Delete this exercise? Past logs stay saved.')){S.ex=S.ex.filter(e=>e.id!==id);save();render()}}
-
-function dash(){
-  const b=parse(todayS),mon=add(todayS,-((b.getDay()+6)%7)+wk*7);
-  let rows='',attD=0,planD=0,done=0,plan=0;const miss={};
-  for(let i=0;i<7;i++){const d=add(mon,i),wd=parse(d).getDay(),pl=S.ex.filter(e=>e.days.includes(wd)),h=hol(d),l=S.logs[d]||{att:false},past=d<=todayS;
-    const dn=pl.filter(e=>isOk(d,e.id)).length;let tag,cls='';
-    if(h){tag='Holiday';cls='hol'}else if(!pl.length){tag='Rest'}else if(!past){tag='Upcoming'}else if(l.att){tag='Present';cls='ok'}else if(d===todayS){tag='Not marked'}else{tag='Absent';cls='bad'}
-    if(!h&&pl.length&&past){planD++;if(l.att)attD++;plan+=pl.length;done+=dn;pl.forEach(e=>{const m=miss[e.name]||(miss[e.name]={p:0,d:0});m.p++;if(isOk(d,e.id))m.d++})}
-    rows+='<div class="card row sp lnk" onclick="cur=\''+d+'\';tab=\'today\';render()"><div><b>'+nice(d)+'</b><div class="mut">'+(h?esc(h.label):pl.length?dn+' / '+pl.length+' exercises':'No exercises planned')+'</div></div><span class="tag '+cls+'">'+tag+'</span></div>';}
-  const pct=plan?Math.round(done/plan*100):0;
-  let o='<h1>Dashboard</h1><div class="row sp card"><button onclick="wk--;render()">‹</button><div style="text-align:center"><b>'+nice(mon)+' – '+nice(add(mon,6))+'</b>'+(wk?'<div class="mut lnk" onclick="wk=0;render()">This week</div>':'')+'</div><button onclick="wk++;render()">›</button></div>';
-  o+='<div class="stats"><div class="card"><div class="mut">Attendance</div><div class="big">'+attD+' / '+planD+'</div><div class="mut">gym days</div></div><div class="card"><div class="mut">Exercises done</div><div class="big">'+done+' / '+plan+'</div><div class="bar" style="margin-top:6px"><i style="width:'+pct+'%"></i></div></div></div>';
-  o+='<h2>Days</h2>'+rows;
-  const ms=Object.keys(miss).filter(k=>miss[k].d<miss[k].p);
-  o+='<h2>Skipped this week</h2>';
-  o+=ms.length?ms.map(k=>'<div class="card row sp"><b>'+esc(k)+'</b><span class="mut">'+miss[k].d+' / '+miss[k].p+' done</span></div>').join(''):'<div class="empty">'+(plan?'Nothing skipped. Nice.':'No data yet for this week.')+'</div>';
-  return o;
-}
-
-function holidays(){
-  let o='<h1>Holidays</h1><div class="card"><div style="margin-bottom:8px"><input type="date" id="hd" value="'+todayS+'"></div><div style="margin-bottom:10px"><input type="text" id="hl" placeholder="Name (e.g. Diwali)"></div><button class="p" onclick="addHol()">Add holiday</button></div>';
-  const hs=S.holidays.slice().sort((a,b)=>b.date.localeCompare(a.date));
-  if(!hs.length)o+='<div class="empty">No holidays stored. Holidays are left out of attendance totals.</div>';
-  hs.forEach(h=>{o+='<div class="card row sp"><div><b>'+esc(h.label)+'</b><div class="mut">'+nice(h.date)+', '+h.date.slice(0,4)+'</div></div><button class="x" onclick="delHol(\''+h.date+'\')">Remove</button></div>'});
-  o+='<h2>Backup</h2><div class="card"><div class="mut" style="margin-bottom:10px">Data is stored on this device only. Export a backup, or import one to move to another device.</div><div class="row"><button class="p" onclick="exportData()">Export</button><label class="mut">Import: <input type="file" accept="application/json" onchange="importData(this)"></label></div></div>';
-  return o;
-}
-function exportData(){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(S)],{type:'application/json'}));a.download='gym-log-backup-'+todayS+'.json';a.click()}
-function importData(inp){const f=inp.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{try{const d=JSON.parse(r.result);if(!d.ex||!d.logs)throw 0;if(confirm('Replace current data with this backup?')){S=Object.assign({ex:[],logs:{},holidays:[]},d);save();render()}}catch(e){alert('Not a valid backup file.')}};r.readAsText(f)}
-function addHol(){const d=$('#hd').value,l=$('#hl').value.trim()||'Holiday';if(!d)return;S.holidays=S.holidays.filter(h=>h.date!==d);S.holidays.push({date:d,label:l});save();render()}
-function delHol(d){S.holidays=S.holidays.filter(h=>h.date!==d);save();render()}
-
-const TABS=[['today','Today'],['routine','Routine'],['dash','Dashboard'],['hol','Holidays']];
-function render(){
-  $('#v').innerHTML=({today:today,routine:routine,dash:dash,hol:holidays})[tab]();
-  $('#nav').innerHTML=TABS.map(t=>'<button class="'+(tab===t[0]?'on':'')+'" onclick="tab=\''+t[0]+'\';render();scrollTo(0,0)">'+t[1]+'</button>').join('');
-}
-render();
-if('serviceWorker' in navigator)addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
-</script>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
 </body>
 </html>

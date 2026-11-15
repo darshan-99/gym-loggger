@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+:root{--bg:#e9eaec;--card:#fff;--ink:#16181d;--mut:#6a707c;--line:#d5d8de;--acc:#1f4fd8;--accfg:#fff;--ok:#1b8a4b;--bad:#c23b3b;--hol:#a8741a;color-scheme:light dark}
+@media (prefers-color-scheme:dark){:root{--bg:#14171c;--card:#1d2128;--ink:#eceef2;--mut:#98a0ad;--line:#2d333d;--acc:#7fa2ff;--accfg:#0d1220;--ok:#4cc27e;--bad:#ef7a7a;--hol:#e0b04f}}
+@theme inline{--color-bg:var(--bg);--color-card:var(--card);--color-ink:var(--ink);--color-mut:var(--mut);--color-line:var(--line);--color-acc:var(--acc);--color-accfg:var(--accfg);--color-ok:var(--ok);--color-bad:var(--bad);--color-hol:var(--hol)}
+
+body{@apply bg-bg text-ink antialiased;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding-top:env(safe-area-inset-top)}
+
+@layer components{
+  .card{@apply bg-card border border-line rounded-xl p-3 mb-2.5}
+  .btn{@apply border border-line bg-card rounded-xl px-3.5 py-2 cursor-pointer focus-visible:outline-2 focus-visible:outline-acc}
+  .btn-p{@apply bg-acc text-accfg border-acc font-bold}
+  .btn-x{@apply text-bad px-2.5 py-1.5}
+  .chip{@apply px-2.5 py-1.5 rounded-full text-[13px] border border-line bg-bg cursor-pointer select-none}
+  .chip-on{@apply bg-acc text-accfg border-acc font-bold}
+  .inp{@apply w-full p-2.5 border border-line rounded-xl bg-bg focus-visible:outline-2 focus-visible:outline-acc}
+  .tag{@apply text-xs font-bold px-2 py-0.5 rounded-full bg-bg border border-line}
+  .empty{@apply text-center text-mut py-6 px-2}
+  .h1{@apply text-[26px] font-extrabold tracking-tight mt-1 mb-3}
+  .h2{@apply text-[15px] font-bold mt-4 mb-2}
+}

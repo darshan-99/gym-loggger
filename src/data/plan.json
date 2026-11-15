@@ -1,0 +1,624 @@
+{
+ "ex": [
+  {
+   "id": "a000",
+   "name": "Treadmill Walk + Dynamic Stretching",
+   "parent": "Warm-up",
+   "target": "10 min",
+   "days": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "img": ""
+  },
+  {
+   "id": "a001",
+   "name": "Lat Pulldown (Wide Grip)",
+   "parent": "Back",
+   "target": "4 × 10–12",
+   "days": [
+    1
+   ],
+   "img": ""
+  },
+  {
+   "id": "a002",
+   "name": "Seated Cable Row (Close Grip)",
+   "parent": "Back",
+   "target": "4 × 10–12",
+   "days": [
+    1
+   ],
+   "img": ""
+  },
+  {
+   "id": "a003",
+   "name": "One-Arm Dumbbell Row",
+   "parent": "Back",
+   "target": "3 × 10 each side",
+   "days": [
+    1
+   ],
+   "img": ""
+  },
+  {
+   "id": "a004",
+   "name": "Face Pulls",
+   "parent": "Back",
+   "target": "3 × 15",
+   "days": [
+    1
+   ],
+   "img": ""
+  },
+  {
+   "id": "a005",
+   "name": "Barbell / EZ-Bar Curl",
+   "parent": "Biceps",
+   "target": "3 × 10–12",
+   "days": [
+    1
+   ],
+   "img": ""
+  },
+  {
+   "id": "a006",
+   "name": "Hammer Curls",
+   "parent": "Biceps",
+   "target": "3 × 12",
+   "days": [
+    1
+   ],
+   "img": ""
+  },
+  {
+   "id": "a007",
+   "name": "Wrist Curls + Reverse Wrist Curls",
+   "parent": "Forearms",
+   "target": "3 × 15 (superset)",
+   "days": [
+    1
+   ],
+   "img": ""
+  },
+  {
+   "id": "a008",
+   "name": "Treadmill Incline Walk",
+   "parent": "Cardio",
+   "target": "20 min · 5.5–6.0 km/h · incline 10–12",
+   "days": [
+    1
+   ],
+   "img": ""
+  },
+  {
+   "id": "a009",
+   "name": "Flat Barbell / Dumbbell Bench Press",
+   "parent": "Chest",
+   "target": "4 × 8–10",
+   "days": [
+    2
+   ],
+   "img": ""
+  },
+  {
+   "id": "a010",
+   "name": "Incline Dumbbell Press",
+   "parent": "Chest",
+   "target": "4 × 10–12",
+   "days": [
+    2
+   ],
+   "img": ""
+  },
+  {
+   "id": "a011",
+   "name": "Pec Deck Fly / Cable Crossover",
+   "parent": "Chest",
+   "target": "3 × 12–15",
+   "days": [
+    2
+   ],
+   "img": ""
+  },
+  {
+   "id": "a012",
+   "name": "Tricep Rope Pushdown",
+   "parent": "Triceps",
+   "target": "3 × 12",
+   "days": [
+    2
+   ],
+   "img": ""
+  },
+  {
+   "id": "a013",
+   "name": "Overhead Dumbbell Tricep Extension",
+   "parent": "Triceps",
+   "target": "3 × 10–12",
+   "days": [
+    2
+   ],
+   "img": ""
+  },
+  {
+   "id": "a014",
+   "name": "Hanging Leg Raises",
+   "parent": "Abs",
+   "target": "3 rounds × 12–15",
+   "days": [
+    2
+   ],
+   "img": ""
+  },
+  {
+   "id": "a015",
+   "name": "Cable Crunches",
+   "parent": "Abs",
+   "target": "3 rounds × 15",
+   "days": [
+    2
+   ],
+   "img": ""
+  },
+  {
+   "id": "a016",
+   "name": "Plank Hold",
+   "parent": "Abs",
+   "target": "3 rounds × 60 s",
+   "days": [
+    2
+   ],
+   "img": ""
+  },
+  {
+   "id": "a017",
+   "name": "Skipping",
+   "parent": "Cardio",
+   "target": "5 min · 40 s on / 20 s off",
+   "days": [
+    2
+   ],
+   "img": ""
+  },
+  {
+   "id": "a018",
+   "name": "Treadmill Brisk Walk / Light Jog",
+   "parent": "Cardio",
+   "target": "15 min · 6.5–7.5 km/h · incline 4",
+   "days": [
+    2
+   ],
+   "img": ""
+  },
+  {
+   "id": "a019",
+   "name": "Barbell Back Squat / Leg Press",
+   "parent": "Legs",
+   "target": "4 × 10",
+   "days": [
+    3
+   ],
+   "img": ""
+  },
+  {
+   "id": "a020",
+   "name": "Romanian Deadlift",
+   "parent": "Legs",
+   "target": "3 × 10–12",
+   "days": [
+    3
+   ],
+   "img": ""
+  },
+  {
+   "id": "a021",
+   "name": "Seated Leg Curl",
+   "parent": "Legs",
+   "target": "3 × 12",
+   "days": [
+    3
+   ],
+   "img": ""
+  },
+  {
+   "id": "a022",
+   "name": "Standing Calf Raises",
+   "parent": "Legs",
+   "target": "4 × 15",
+   "days": [
+    3
+   ],
+   "img": ""
+  },
+  {
+   "id": "a023",
+   "name": "Seated Dumbbell Shoulder Press",
+   "parent": "Shoulders",
+   "target": "4 × 10",
+   "days": [
+    3
+   ],
+   "img": ""
+  },
+  {
+   "id": "a024",
+   "name": "Dumbbell Lateral Raises",
+   "parent": "Shoulders",
+   "target": "4 × 12–15",
+   "days": [
+    3
+   ],
+   "img": ""
+  },
+  {
+   "id": "a025",
+   "name": "Treadmill Flat / Low-Incline Walk",
+   "parent": "Cardio",
+   "target": "15 min · 5.0–5.5 km/h · incline 3",
+   "days": [
+    3
+   ],
+   "img": ""
+  },
+  {
+   "id": "a026",
+   "name": "Assisted Pull-Ups / Neutral-Grip Pulldown",
+   "parent": "Back",
+   "target": "4 × 8–12",
+   "days": [
+    4
+   ],
+   "img": ""
+  },
+  {
+   "id": "a027",
+   "name": "Chest-Supported T-Bar / Machine Row",
+   "parent": "Back",
+   "target": "3 × 10–12",
+   "days": [
+    4
+   ],
+   "img": ""
+  },
+  {
+   "id": "a028",
+   "name": "Straight-Arm Cable Pulldown",
+   "parent": "Back",
+   "target": "3 × 12–15",
+   "days": [
+    4
+   ],
+   "img": ""
+  },
+  {
+   "id": "a029",
+   "name": "Incline Dumbbell Curl",
+   "parent": "Biceps",
+   "target": "3 × 10–12",
+   "days": [
+    4
+   ],
+   "img": ""
+  },
+  {
+   "id": "a030",
+   "name": "Preacher Curl",
+   "parent": "Biceps",
+   "target": "3 × 12",
+   "days": [
+    4
+   ],
+   "img": ""
+  },
+  {
+   "id": "a031",
+   "name": "Russian Twists",
+   "parent": "Abs",
+   "target": "3 rounds × 20 total",
+   "days": [
+    4
+   ],
+   "img": ""
+  },
+  {
+   "id": "a032",
+   "name": "Reverse Crunches",
+   "parent": "Abs",
+   "target": "3 rounds × 15",
+   "days": [
+    4
+   ],
+   "img": ""
+  },
+  {
+   "id": "a033",
+   "name": "Bicycle Crunches",
+   "parent": "Abs",
+   "target": "3 rounds × 20",
+   "days": [
+    4
+   ],
+   "img": ""
+  },
+  {
+   "id": "a034",
+   "name": "Kickboxing Bag / Shadow Work",
+   "parent": "Cardio",
+   "target": "10 min · 2 min rounds, 30 s rest",
+   "days": [
+    4
+   ],
+   "img": ""
+  },
+  {
+   "id": "a035",
+   "name": "Treadmill Incline Walk",
+   "parent": "Cardio",
+   "target": "15 min · 5.5 km/h · incline 8",
+   "days": [
+    4
+   ],
+   "img": ""
+  },
+  {
+   "id": "a036",
+   "name": "Incline Barbell / Smith Machine Press",
+   "parent": "Chest",
+   "target": "4 × 8–10",
+   "days": [
+    5
+   ],
+   "img": ""
+  },
+  {
+   "id": "a037",
+   "name": "Flat Dumbbell Press",
+   "parent": "Chest",
+   "target": "3 × 10–12",
+   "days": [
+    5
+   ],
+   "img": ""
+  },
+  {
+   "id": "a038",
+   "name": "Dips / Push-Ups to Failure",
+   "parent": "Chest",
+   "target": "3 × max",
+   "days": [
+    5
+   ],
+   "img": ""
+  },
+  {
+   "id": "a039",
+   "name": "Skull Crushers (EZ-Bar)",
+   "parent": "Triceps",
+   "target": "3 × 10–12",
+   "days": [
+    5
+   ],
+   "img": ""
+  },
+  {
+   "id": "a040",
+   "name": "Straight-Bar Tricep Pushdown",
+   "parent": "Triceps",
+   "target": "3 × 12",
+   "days": [
+    5
+   ],
+   "img": ""
+  },
+  {
+   "id": "a041",
+   "name": "Farmer's Walk",
+   "parent": "Forearms",
+   "target": "3 × 40 s",
+   "days": [
+    5
+   ],
+   "img": ""
+  },
+  {
+   "id": "a042",
+   "name": "Kettlebell Swings",
+   "parent": "Conditioning",
+   "target": "3 rounds × 15",
+   "days": [
+    5
+   ],
+   "img": ""
+  },
+  {
+   "id": "a043",
+   "name": "Box Jumps / Step-Ups",
+   "parent": "Conditioning",
+   "target": "3 rounds × 12",
+   "days": [
+    5
+   ],
+   "img": ""
+  },
+  {
+   "id": "a044",
+   "name": "Battle Ropes",
+   "parent": "Conditioning",
+   "target": "3 rounds × 30 s",
+   "days": [
+    5
+   ],
+   "img": ""
+  },
+  {
+   "id": "a045",
+   "name": "Burpees",
+   "parent": "Conditioning",
+   "target": "3 rounds × 10",
+   "days": [
+    5
+   ],
+   "img": ""
+  },
+  {
+   "id": "a046",
+   "name": "Treadmill Cool-Down Walk",
+   "parent": "Cardio",
+   "target": "10 min · 5.0 km/h · incline 5",
+   "days": [
+    5
+   ],
+   "img": ""
+  },
+  {
+   "id": "a047",
+   "name": "Goblet Squats / Hack Squat",
+   "parent": "Legs",
+   "target": "3 × 10–12",
+   "days": [
+    6
+   ],
+   "img": ""
+  },
+  {
+   "id": "a048",
+   "name": "Walking Lunges",
+   "parent": "Legs",
+   "target": "3 × 10 each leg",
+   "days": [
+    6
+   ],
+   "img": ""
+  },
+  {
+   "id": "a049",
+   "name": "Leg Extension",
+   "parent": "Legs",
+   "target": "3 × 12–15",
+   "days": [
+    6
+   ],
+   "img": ""
+  },
+  {
+   "id": "a050",
+   "name": "Seated Calf Raises",
+   "parent": "Legs",
+   "target": "4 × 15",
+   "days": [
+    6
+   ],
+   "img": ""
+  },
+  {
+   "id": "a051",
+   "name": "Arnold Press / Machine Shoulder Press",
+   "parent": "Shoulders",
+   "target": "3 × 10–12",
+   "days": [
+    6
+   ],
+   "img": ""
+  },
+  {
+   "id": "a052",
+   "name": "Cable Lateral Raises + Shrugs",
+   "parent": "Shoulders",
+   "target": "3 × 12–15 (superset)",
+   "days": [
+    6
+   ],
+   "img": ""
+  },
+  {
+   "id": "a053",
+   "name": "Hanging Knee Raises",
+   "parent": "Abs",
+   "target": "3 × 15",
+   "days": [
+    6
+   ],
+   "img": ""
+  },
+  {
+   "id": "a054",
+   "name": "Side Planks",
+   "parent": "Abs",
+   "target": "2 × 30 s each side",
+   "days": [
+    6
+   ],
+   "img": ""
+  },
+  {
+   "id": "a055",
+   "name": "Treadmill Moderate Walk",
+   "parent": "Cardio",
+   "target": "15 min · 5.5 km/h · incline 5",
+   "days": [
+    6
+   ],
+   "img": ""
+  },
+  {
+   "id": "a056",
+   "name": "Dynamic Warm-up & Joint Mobility",
+   "parent": "Warm-up",
+   "target": "10 min",
+   "days": [
+    0
+   ],
+   "img": ""
+  },
+  {
+   "id": "a057",
+   "name": "Outdoor Run / Walk Intervals",
+   "parent": "Cardio",
+   "target": "35–40 min",
+   "days": [
+    0
+   ],
+   "img": ""
+  },
+  {
+   "id": "a058",
+   "name": "Skipping + Planks + Mountain Climbers (optional)",
+   "parent": "Abs",
+   "target": "10 min",
+   "days": [
+    0
+   ],
+   "img": ""
+  },
+  {
+   "id": "a059",
+   "name": "Full-Body Static Stretching & Foam Rolling",
+   "parent": "Cool-down",
+   "target": "15 min",
+   "days": [
+    0
+   ],
+   "img": ""
+  },
+  {
+   "id": "a999",
+   "name": "Static Stretching (Trained Muscles)",
+   "parent": "Cool-down",
+   "target": "5 min · 20–30 s holds",
+   "days": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "img": ""
+  }
+ ]
+}

@@ -46,10 +46,10 @@ export default function Holidays() {
       <h1 className="h1">Holidays</h1>
       <div className="card space-y-2">
         <div className="grid grid-cols-2 gap-2">
-          <label className="text-sm text-mut">From
+          <label className="text-sm text-mut min-w-0">From
             <input type="date" className="inp mt-1" value={from} onChange={e => setFrom(e.target.value)} />
           </label>
-          <label className="text-sm text-mut">To (optional)
+          <label className="text-sm text-mut min-w-0">To (optional)
             <input type="date" className="inp mt-1" min={from} value={to} onChange={e => setTo(e.target.value)} />
           </label>
         </div>
@@ -77,9 +77,11 @@ export default function Holidays() {
       <h2 className="h2">Backup</h2>
       <div className="card">
         <p className="text-sm text-mut mb-2.5">Data is stored on this device only. Export a backup, or import one to move to another device.</p>
-        <div className="flex items-center gap-3">
+        <div className="flex flex-col items-start gap-3">
           <button className="btn btn-p" onClick={exportData}>Export</button>
-          <label className="text-sm text-mut">Import: <input type="file" accept="application/json" onChange={e => onImport(e.target.files?.[0])} /></label>
+          <label className="text-sm text-mut w-full min-w-0">Import backup
+            <input type="file" accept="application/json" className="block w-full max-w-full mt-1" onChange={e => onImport(e.target.files?.[0])} />
+          </label>
         </div>
       </div>
     </>

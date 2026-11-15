@@ -62,7 +62,7 @@ export default function Routine() {
         <DayChips days={days} onToggle={d => setDays(toggle(days, d))} />
         <div className="flex items-center gap-2.5">
           <Thumb src={img} alt="Preview" />
-          <input type="file" accept="image/*" className="text-sm" onChange={async e => { const f = e.target.files?.[0]; const v = f && await pick(f); if (v) setImg(v) }} />
+          <input type="file" accept="image/*" className="min-w-0 flex-1 text-sm" onChange={async e => { const f = e.target.files?.[0]; const v = f && await pick(f); if (v) setImg(v) }} />
         </div>
         <button className="btn btn-p mt-2.5" onClick={addEx}>Add exercise</button>
       </div>
@@ -75,8 +75,8 @@ export default function Routine() {
             <div key={e.id} className="card flex gap-2.5 items-start">
               <Thumb src={e.img} alt={e.name} />
               <div className="flex-1 min-w-0">
-                <div className="font-bold">{e.name}</div>
-                {e.target && <div className="text-sm text-mut">{e.target}</div>}
+                <div className="font-bold break-words">{e.name}</div>
+                {e.target && <div className="text-sm text-mut break-words">{e.target}</div>}
                 <DayChips days={e.days} onToggle={d => db.ex.update(e.id, { days: toggle(e.days, d) })} />
                 <div className="flex flex-col items-start gap-1 text-sm text-mut">
                   <button className="underline" onClick={() => changeParent(e)}>Change parent</button>
@@ -97,7 +97,7 @@ export default function Routine() {
       <div className="card">
         <button className="btn btn-p" onClick={onPlan}>Load my 7-day plan</button>
         <p className="text-sm text-mut my-2">Or load a routine JSON file. Both replace all exercises; attendance and holidays stay.</p>
-        <input type="file" accept="application/json" className="text-sm" onChange={e => onRoutine(e.target.files?.[0])} />
+        <input type="file" accept="application/json" className="block w-full max-w-full text-sm" onChange={e => onRoutine(e.target.files?.[0])} />
       </div>
     </>
   )
